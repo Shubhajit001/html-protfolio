@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Intro Page</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar sidebarGo"></div>
+        <div class="main">
+            <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            <div class="intro">
+                    <h2>About me</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis non fugit unde fugiat consequatur voluptate molestias doloribus quod reprehenderit voluptas animi atque et praesentium, blanditiis mollitia perspiciatis quia voluptatibus eum cupiditate dicta dolores! Ipsum minima facere delectus?</p>
+                    <h2>My Skills</h2>
+                    <div class="skillcontainer">
+                        <div class="skillItem">HTML: <div class="skill"></div></div>
+                        <div class="skillItem">CSS: <div class="skill"></div></div>
+                        <div class="skillItem">JavaScript: <div class="skill"></div></div>
+                        <div class="skillItem">Php: <div class="skill"></div></div>
+                        <div class="skillItem">Python: <div class="skill"></div></div>
+                    </div>
+            </div>
+        </div>
+
+        <script>
+            // Load the navbar HTML into the container
+            const navbarContainer = document.querySelector('.sidebar');
+
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    navbarContainer.innerHTML = data;
+                });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+}
+
+/* icon */
+#nav-icon3 {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    /* margin: 4px; */
+    left: 1rem;
+    top: 1rem;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 3;
+    display: none;
+}
+
+#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+    top: 9px;
+}
+
+#nav-icon3 span:nth-child(4) {
+    top: 18px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+
+
+
+/* home */
+
+.sidebar {
+    /* background-color: rgba(137, 133, 133, 0.268); */
+    position: relative;
+    background-color: white;
+    width: 27rem;
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+        0 -4px 8px rgba(0, 0, 0, 0.1),
+        4px 0 8px rgba(0, 0, 0, 0.1),
+        -4px 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in;  
+    z-index: 2;
+}
+
+
+
+.sidebar nav {
+    padding: 4.5rem;
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 3rem;
+    padding: 3.3rem 0;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.main {
+    /* background-color: yellow; */
+    width: 81vw;
+    height: 100vh;
+    font-size: 1.6rem;
+}
+
+.container {
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.infoContainer {
+    /* background-color: gray; */
+    height: 70vh;
+    width: 75vw;
+    margin: 9.2rem auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+        0 -4px 6px rgba(0, 0, 0, 0.1),
+        4px 0 6px rgba(0, 0, 0, 0.1),
+        -4px 0 6px rgba(0, 0, 0, 0.1);
+        /* margin: 7rem 8.8rem ; */
+}
+
+.devInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5rem;
+    /* width: 45%; */
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+.hello {
+    font-size: 6.5rem;
+}
+
+.name {
+    font-size: 6rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.name h1 {
+    margin: 0.5rem 0 0.7rem 0;
+    width: 40rem;
+    position: relative;
+    font-size: 5rem;
+    color: transparent;
+    -webkit-text-stroke: 0.4px blueviolet;
+    background-image: linear-gradient(blueviolet, blueviolet);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 0s;
+}
+
+.name h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 0.3rem solid blueviolet;
+    z-index: 1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 0s;
+}
+
+.who {
+    font-size: 3rem;
+    margin: 0 0 0.7rem 0;
+    font-weight: 600;
+}
+
+.about {
+    /* height: 7.5rem; */
+    font-size: 3rem;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+.moreabout {
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.btn {
+    margin-top: 3rem;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn button {
+    padding: 0.8rem 1.3rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    border: 0;
+}
+
+.btn button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+        0 -4px 6px rgba(0, 0, 0, 0.1),
+        4px 0 6px rgba(0, 0, 0, 0.1),
+        -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.devPic img {
+    height: 70vh;
+    border-radius: 10px;
+    margin-left: -3.15rem;
+}
+
+@keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -40rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0rem 0;
+    }
+}
+
+@keyframes homeCursorText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* respncive */
+
+/* @media screen and (min-width: 1101px) and (min-height:690px) {
+
+    .infoContainer {
+        height: 48.5rem;
+    }
+
+    .devPic img {
+        height: 48.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1101px) and (min-height:500px) and (max-height:689px) {
+
+
+    html,
+    body {
+        font-size: 50.5%;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (min-width: 1101px) and (min-height:370px) and (max-height:499px) {
+
+    html,
+    body {
+        font-size: 40.5%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1101px) and (min-height:271px) and (max-height:369px) {
+
+    html,
+    body {
+        font-size: 30.5%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1101px) and (min-height:175px) and (max-height:270px) {
+
+    html,
+    body {
+        font-size: 20.5%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1101px) and (max-height:174px) {
+
+    html,
+    body {
+        font-size: 20.5%;
+        overflow: hidden;
+    }
+
+    .sidebar,
+    .main {
+        height: 63rem;
+    }
+
+    .infoContainer {
+        height: 40.5rem;
+    }
+
+    .devPic img {
+        height: 40.5rem;
+    }
+
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* responcive */
+
+@media screen and (max-width: 1100px) {
+
+    html,
+    body {
+        font-size: 47.5%;
+    }
+
+    #nav-icon3{
+        display: block;
+    }
+
+    .sidebar{
+        position: absolute;
+    }
+
+    .sidebarGo {
+        transform: translate(-270px, 0px);
+        position: absolute;
+    }
+
+    .main {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .infoContainer {
+        height: 55vh;
+        width: 90vw;
+    }
+
+    .devPic img {
+        height: 45vh;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact.css */
+
+.contactform {
+    padding: 3.4rem 3.4rem 0 3.4rem;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 5rem 8.8rem ;
+
+}
+
+
+.contactform h1 {
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 2rem;
+}
+
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 75vh;
+}
+
+.contactform form div {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input {
+    width: 26vw;
+    border-radius: 5px;
+    margin: 0.6rem 0 0 0;
+    padding: 3px;
+    border: 1.3px solid black;
+    outline: none;
+}
+
+.contactform form div input:hover,
+textarea:hover {
+    box-shadow: 0 0 6px rgba(9, 14, 18, 0.5);
+}
+
+
+#emailHelp {
+    font-size: 1.1rem;
+    color: midnightblue;
+    margin: 0 .5rem;
+    padding: 0.4rem 0 0 0;
+}
+
+.contactform form .form-check {
+    flex-direction: row;
+    align-items: center;
+}
+
+.contactform form .form-check input {
+    width: 2.3rem;
+    margin: 0.3rem;
+    box-shadow: none;
+}
+
+.contactform form .form-check input:hover {
+    box-shadow: none;
+}
+
+.contactform form div textarea {
+    width: 26vw;
+    height: 10vh;
+    border-radius: 5px;
+    margin: 0.6rem 0 0 0;
+    padding: 3px;
+    border: 1.3px solid black;
+    outline: none;
+}
+
+.btn .btn-primary {
+    width: 10rem;
+    font-size: 1.6rem;
+    margin: -1.8rem 0;
+    padding: 0.7rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* blog.css */
+
+.blogItem {
+    margin: 2rem;
+    font-family: 'Fira Sans', sans-serif;
+        height: 20rem;
+        width: 80rem;
+        margin: 6rem 8.8rem ;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+            0 -4px 6px rgba(0, 0, 0, 0.1),
+            4px 0 6px rgba(0, 0, 0, 0.1),
+            -4px 0 6px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 2.3rem;
+}
+
+p {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.blogContainer{
+    margin: 7rem 8.8rem ;
+}
+
+
+
+
+
+
+
+
+
+/* intro.css */
+.intro {
+    /* height: 20vh;
+    width: 75vw;
+    margin: 9.2rem auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    background-color: beige;
+    margin: 7rem 8.8rem ;
+}
+
+.intro h2 {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 1.2rem;
+}
+
+.intro p {
+    font-family: 'Source Code Pro', monospace;
+    margin: 1.2rem;
+}
+
+.skillcontainer {
+    padding: 1.2rem;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+
+}
+
+.skill {
+    width: 26.5rem;
+    height: 1rem;
+    background-color: purple;
+    border: 1.5px solid black;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile.shubhajitdev.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="index.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar sidebarGo">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./public/intro.html">My Intro</a></li>
+                    <li><a href="./public/services.html">Services</a></li>
+                    <li><a href="./public/blog.html">Blog</a></li>
+                    <li><a href="./public/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            <div class="infoContainer">
+                <div class="devInfo">        
+                    <div class="hello">Hi, I am</div>
+                    <div class="name"><h1>Shubhajit Mondal</h1></div>
+                    <div class="who">and I am a passionate</div>                
+                    <div class="about"><span id="element"></span></div>
+                    <div class="moreabout">I am a Full Stack Web Developer with a passion for all things tech and coding. I transform ideas into captivating digital experiences, one line of code at a time. Let's build the future together.</div>
+                    <div class="btn">
+                        <a href="/cv.txt" target="_blank">
+                            <button>Download CV</button>
+                        </a>
+                        <a href="/contact.html">
+                            <button>Contact Me</button>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="devPic">
+                    <img src="img/dev2.png" alt="shubhajit">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Website designer','Full stack web developer','Web developer &amp; Website designer'],
+          typeSpeed: 50,
+        });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar sidebarGo"></div>
+    </div>
+    <div id="nav-icon3">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    <script>
+        // Load the navbar HTML into the container
+        const navbarContainer = document.querySelector('.sidebar');
+
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

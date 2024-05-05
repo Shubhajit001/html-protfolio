@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar sidebarGo"></div>
+        <div class="main">
+            <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            <div class="contactform">
+                <h1>Contact me for work/general Enquiries</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="clientname">Name</label>
+                        <input type="name" class="form-control" id="clientname" placeholder="Enter your full name" required >
+                    </div>
+                    <div class="form-group">
+                        <label for="clientemail">Email address</label>
+                        <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp" placeholder="Enter your email address" required>
+                        <div id="emailHelp" class="form-text text-muted">We'll never share your email & phone with
+                            anyone else.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientphone">Phone</label>
+                        <input type="tel" class="form-control" id="clientphone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientenquiry">Enquiry</label>
+                        <input type="text" class="form-control" id="clientenquiry" placeholder="Enter your inquiry">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="isclient">
+                        <label class="form-check-label" for="isclient">I want you to work on a project with me</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientmessage">Message</label>
+                        <textarea class="form-control" id="clientmessage" aria-describedby="messageHelp" placeholder="Enter your message"></textarea>
+                    </div>                    
+                    <div class="btn">
+                        <button type="submit" class="btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load the navbar HTML into the container
+        const navbarContainer = document.querySelector('.sidebar');
+
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
